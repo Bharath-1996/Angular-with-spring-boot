@@ -1,0 +1,16 @@
+<h1>welcome!</h1>
+<div>
+    welcome {{name}},to see todos click<a routerLink="/todos">here</a>
+</div>
+<div>
+    to view in spring boot click
+    <button (click)="helloworld()" class="btn btn-success">here</button>   
+</div>
+<div>
+        to view in spring boot click with path-variable
+        <button (click)="helloworldwithpathvariable()" class="btn btn-success">here</button>   
+    </div>
+<div class="container" *ngIf="welcomemessagefromservice">
+ <h2>your message is: {{welcomemessagefromservice}}</h2>
+</div>
+    
