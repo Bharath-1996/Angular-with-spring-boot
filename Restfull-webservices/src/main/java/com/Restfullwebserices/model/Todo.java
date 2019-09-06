@@ -1,0 +1,62 @@
+package com.Restfullwebserices.model;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class Todo {
+
+	@Id
+	@GeneratedValue
+	private Long id;
+	private String username;
+	private String subject;
+	private Date targetDate;
+	private boolean isDone;
+	
+	protected Todo()
+	{
+		
+	}
+	public Todo(long id, String username, String subject, Date targetDate, boolean isDone) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.subject = subject;
+		this.targetDate = targetDate;
+		this.isDone = isDone;
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getSubject() {
+		return subject;
+	}
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+	public Date getTargetDate() {
+		return targetDate;
+	}
+	public void setTargetDate(Date targetDate) {
+		this.targetDate = targetDate;
+	}
+	public boolean isDone() {
+		return isDone;
+	}
+	public void setDone(boolean isDone) {
+		this.isDone = isDone;
+	}
+}
